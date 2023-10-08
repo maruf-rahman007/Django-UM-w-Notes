@@ -1,0 +1,55 @@
+In this section we are going to get started with a new website call python anywhere . It's a virtual environment that we will use in this course . 
+
+At first we have to go to the website and create a free account [ https://www.pythonanywhere.com ]
+
+If you want to explore you can go for it or else just simply go to the console and then bash 
+
+After this you will follow the instructions from [ https://www.dj4e.com/assn/dj4e_install.md ]
+
+		mkvirtualenv django4 --python=/usr/bin/python3.9
+			
+		pip install django==4.2.3
+
+		python --version
+		# This should show something like Python 3.9.5
+
+		python -m django --version
+		# This should show something like 4.2.3 
+
+		# Auto switch into django4 virtual environment
+		workon django4
+		Impliment it in by going to file directory then .bashhrc and in last line just paste it .You can add eco " message " which will show you a message when ever you will be in the directory .
+
+		you can check your directory by giving a simple command "pwd"
+		
+Next thing to do is clone / copy some files from github 
+		cd ~ (o go to the main directory)
+		
+		git clone https://github.com/csev/dj4e-samples
+
+		pip install -r requirements4.txt
+
+		python manage.py check ( take all the dependencies )
+
+
+Now we will add databases 
+		python manage.py makemigrations
+
+Now go to the main directory using 
+		cd ~
+
+Now make new directoery 
+		mkdir django_projects
+
+after this go and check the file you will see a new directory named django_projects
+		cd ~/django_projects
+		django-admin startproject mysite
+This will create a new project in the directory . After this you have to go to this file location ~/django_projects/mysite/mysite/settings.py and change  ALLOWED_HOSTS = [ '*' ] . This is mandatory when you setup your project first so that others can see.After this go to 3 tab and you will see web . open it in new tab . 
+
+Click  add a new web app do the manual configaration select python version that you used first . After this you will get a new dash board with domain name .
+
+Here you have to change the source file and working directory according to their location both of them will be same . then add virtual environment path . change the wasgi .py and do what instructions says . Boom now if you reload and click on the link you will see your website 
+
+If anything wrong / error happens the best way is to go to bash and type ls . it will give you the list of directory the give a command python manage.py check 
+
+it will show you the error 
