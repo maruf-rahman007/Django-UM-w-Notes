@@ -52,5 +52,5 @@ Here you have to change the source file and working directory according to their
 
 If anything wrong / error happens the best way is to go to bash and type ls . it will give you the list of directory the give a command python manage.py check 
 
-it will show you the error if there is any....
+it will show you the error if there is any.....
 
